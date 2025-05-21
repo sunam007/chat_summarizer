@@ -1,0 +1,16 @@
+user: Best programming language in 2024?
+AI : Python remains popular for AI
+USER   :   What about JavaScript?
+aI: Dominates web development
+User- And Rust?
+  aI  : Growing for system programming
+[Q] User: Will AI replace programmers?
+[A] AI : Unlikely - it augments more than replaces
+User :   Recommend tech careers?
+AI: Data science, cybersecurity, AI engineering
+user-Machine Learning?
+AI: Yes! Particularly NLP and computer vision
+Usuario: ¿Qué es blockchain?  
+AI: Distributed ledger technology
+User : Thanks!
+  aI  : Anytime!

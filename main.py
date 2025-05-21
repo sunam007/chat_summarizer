@@ -1,14 +1,13 @@
 import os
 import re
 import nltk
-import string
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 from collections import Counter
 
-nltk.download('punkt')
-nltk.download('punkt_tab')
-nltk.download('stopwords')
+# nltk.download('punkt')
+# nltk.download('punkt_tab')
+# nltk.download('stopwords')
 
 
 def read_chat_file(file_path):
@@ -93,11 +92,13 @@ def summarize_folder(folder_path):
             # Message Stats
             total_messages = len(user_msgs) + len(ai_msgs)
             print(f"Total Messages: {total_messages} (User: {len(user_msgs)} | AI: {len(ai_msgs)})\n") # prints the message counts of user and ai
+            print(f"- The conversation had {total_messages} exchanges")
 
             # Top Keywords
             keywords = extract_keywords(user_msgs, ai_msgs)
             keyword_list = [word for word, _ in keywords]
-            print(f"The conversation mainly focused on these top keywords: {', '.join(keyword_list)}" + "\n")
+            print(f"- The user asked mainly about {keyword_list[0]}")
+            print(f"- Most common keywords: {', '.join(keyword_list)}" + "\n")
 
             # User Messages
             print("- User Messages:")

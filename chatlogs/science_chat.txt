@@ -1,0 +1,15 @@
+USER : Hello science assistant!
+ aI   :   Hi there! How can I help with science today?
+UsEr: tell me ABOUT black holes
+AI: They're regions where gravity is so strong nothing escapes
+User- What about wormholes?
+  AI: Theoretical passages through spacetime
+user :Can they be used for time travel?
+AI :   Possibly, but we've never observed one
+[10:30] User: What's the Fermi Paradox?
+[11:00] AI : The apparent contradiction between lack of alien evidence and high probability of existence
+BOT: Would you like more details?
+User  :  Yes please!
+aSSISTANT: The Drake Equation estimates...
+     potential civilizations
+User:Thanks!
