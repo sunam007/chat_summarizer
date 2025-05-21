@@ -46,5 +46,5 @@ A Python script that analyzes chat logs between users and AI, providing message 
 ### Output sample 1
 ![output 1](screenshots/output.png)
 
-### Output sample 12
+### Output sample 2
 ![output 2](screenshots/output_2.png)
