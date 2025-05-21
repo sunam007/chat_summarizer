@@ -46,24 +46,40 @@ def read_chat_file(file_path):
     except FileNotFoundError:
         print(f"Error: File not found at {file_path}")
         return [], []
+    
     except UnicodeDecodeError:
         print(f"Error: Could not decode file at {file_path}")
         return [], []
 
     return user_messages, ai_messages
 
-if __name__ == "__main__":
-    file_path = "chatlogs/chat1.txt"
-    if os.path.exists(file_path):
-        user_msgs, ai_msgs = read_chat_file(file_path)
+def summarize_folder(folder_path):
+    for filename in os.listdir(folder_path):
+        if filename.endswith(".txt"):
+            file_path = os.path.join(folder_path, filename)
+            user_msgs, ai_msgs = read_chat_file(file_path)
 
-        print("User messages:")
-        for msg in user_msgs:
-            print("-" , msg)
-        
-        print("\nAI messages:")
-        for msg in ai_msgs:
-            print("-" , msg)
-    
+            print("=" * 50) # creates a divider for separating multiple chat summaries
+
+            print(f"Summary for: {filename}" + "\n")
+            total_messages = len(user_msgs) + len(ai_msgs)
+
+            print(f"- Total Messages: {total_messages} | User: {len(user_msgs)} | AI: {len(ai_msgs)}" + "\n")
+
+            print("- User Messages:")
+            for msg in user_msgs:
+                print("     -", msg)
+
+            print("- AI Messages:")
+            for msg in ai_msgs:
+                print("     -", msg)
+
+            print("=" * 50 + "\n") # creates a divider for separating multiple chat summaries
+
+
+if __name__ == "__main__":
+    folder_path = "chatlogs"
+    if os.path.exists(folder_path):
+        summarize_folder(folder_path)
     else:
-        print(f"{file_path} not found")
+        print(f"{folder_path} folder not found.")
